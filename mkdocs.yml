@@ -33,7 +33,7 @@ theme:
     view: material/eye
 
 
-repo_url: https://github.com/ZokszY/GEO1003-Shared_Notes
+repo_url: https://github.com/alexandre-bry/GEO1003-Shared_Notes
 docs_dir: docs
 edit_uri: edit/main/docs/
 
@@ -67,7 +67,7 @@ extra_css:
 plugins:
   # - git-authors
   - git-committers:
-      repository: ZokszY/GEO1003-Shared_Notes
+      repository: alexandre-bry/GEO1003-Shared_Notes
       branch: main
       token: !!python/object/apply:os.getenv ["MKDOCS_GIT_COMMITTERS_APIKEY"]
   - git-revision-date-localized:
