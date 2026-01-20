@@ -12,7 +12,7 @@ Notes from the chapter Introduction of the book "Principles of GNSS, Inertial, a
 2. **Fixed vs. movable objects** (static vs. mobile positioning)
 3. **Self-positioning vs. remote positioning**
 
-**Navigation systems** use various sensors, such as accelerometers and gyroscopes, to calculate position and velocity. The output is a **navigation solution**, typically including position and velocity, and sometimes attitude and acceleration. Systems may calculate 2D or 3D positions based on the application (e.g., cars vs. airplanes).
+**Navigation systems** use various sensors, such as accelerometers and gyroscopes, to calculate position and velocity. The output is a **navigation solution**, typically including position and velocity, and sometimes altitude and acceleration. Systems may calculate 2D or 3D positions based on the application (e.g., cars vs. airplanes).
 
 The **user** in navigation refers to the person or software that receives the position and velocity solution, and **user equipment** refers to the system located on the object being positioned.
 
@@ -30,21 +30,21 @@ Two fundamental methods for determining position:
 
 ### Dead Reckoning
 
-Calculates current position by integrating changes in position or velocity from a previous location, requiring attitude information for accurate direction.
+Calculates current position by integrating changes in position or velocity from a previous location, requiring altitude information for accurate direction.
 
 - 2D Navigation: Only a heading measurement is needed.
-- 3D Navigation: Requires a full attitude measurement in three components.
-- Accuracy: Smaller calculation steps enhance accuracy, particularly with changing attitudes.
+- 3D Navigation: Requires a full altitude measurement in three components.
+- Accuracy: Smaller calculation steps enhance accuracy, particularly with changing altitudes.
 
 Modern Methods: Include pedometers and advanced pedestrian dead reckoning using accelerometers.
 Odometer: Measures distance through wheel rotations, used in vehicles and marine/aircraft equivalents.
 Heading Measurement: Done using magnetic compasses, gyrocompasses, Land heading, roll and pitch (measured using accelerometers, tilt sensors, or celestial observations (sun, moon, stars)), and Gyroscopes and differential odometry.
-Inertial Navigation Systems (INS): Use accelerometers, gyroscopes, and a navigation processor to calculate position, velocity, and attitude.
+Inertial Navigation Systems (INS): Use accelerometers, gyroscopes, and a navigation processor to calculate position, velocity, and altitude.
 
 Performance:
 
 - Navigation accuracy depends on sensor quality
-- The principal advantages of inertial navigation and other dead-reckoning techniques, compared to position fixing, are continuous operation, a high update rate, low short-term noise, and the provision of attitude, angular rate, and acceleration as well as position and velocity.
+- The principal advantages of inertial navigation and other dead-reckoning techniques, compared to position fixing, are continuous operation, a high update rate, low short-term noise, and the provision of altitude, angular rate, and acceleration as well as position and velocity.
 - The main drawbacks are that the position solution must be initialized and the position error grows with time because the errors in successive distance and direction measurements accumulate.
 - In an integrated navigation system, position-fixing measurements may be used to correct the dead-reckoning navigation solution and also calibrate the dead-reckoning sensor errors.
 
@@ -166,7 +166,7 @@ Pattern Matching & Fault Detection:
 
 ### The Navigation System
 
-Diverse Needs Across Applications: Navigation requirements differ significantly depending on the application. Factors include accuracy, update rate, reliability, budget, size, and mass. Some applications also require attitude solutions in addition to position and velocity.
+Diverse Needs Across Applications: Navigation requirements differ significantly depending on the application. Factors include accuracy, update rate, reliability, budget, size, and mass. Some applications also require altitude solutions in addition to position and velocity.
 
 #### Requirements
 
@@ -216,7 +216,7 @@ Position-fixing and dead-reckoning systems can be aided using the integrated nav
 
 Dead Reckoning Aiding:
 
-- Requires initialization of position, velocity, and sometimes attitude.
+- Requires initialization of position, velocity, and sometimes altitude.
 - Integration algorithms provide periodic corrections to navigation solutions and sensor outputs.
 - Estimated sensor errors can be fed back to improve accuracy.
 

@@ -32,11 +32,11 @@ Positioning and navigation techniques rely on two fundamental methods:
 
 ### 1.2 Dead reckoning
 
-Dead reckoning, possibly derived from "deduced reckoning," involves calculating the current position by measuring changes in position or velocity and integrating this data. This information is added to a previous position to determine the current one. Measurements are taken in body-aligned axes, requiring an attitude solution to establish the travel direction relative to the environment.
+Dead reckoning, possibly derived from "deduced reckoning," involves calculating the current position by measuring changes in position or velocity and integrating this data. This information is added to a previous position to determine the current one. Measurements are taken in body-aligned axes, requiring an altitude solution to establish the travel direction relative to the environment.
 
 - 2D Navigation: A heading measurement suffices.
-- 3D Navigation: Requires a full three-component attitude measurement.
-- Accuracy: Smaller step sizes in calculations improve accuracy, especially when attitudes change.
+- 3D Navigation: Requires a full three-component altitude measurement.
+- Accuracy: Smaller step sizes in calculations improve accuracy, especially when altitudes change.
 
 Modern methods include automated pace counting with pedometers and advanced pedestrian dead reckoning (PDR) using accelerometers to estimate step length.
 
@@ -48,17 +48,17 @@ Heading Measurement:
 - Marine heading: Determined with gyrocompasses.
 - Land heading: Derived from vehicle trajectory.
 - Roll and pitch: Measured using accelerometers, tilt sensors, or celestial observations (sun, moon, stars).
-- Gyroscopes and differential odometry help measure changes in attitude and heading.
+- Gyroscopes and differential odometry help measure changes in altitude and heading.
 
 Inertial Navigation Systems (INS):
 
 - A complete 3D dead-reckoning system includes inertial sensors (IMU: accelerometers and gyroscopes) and a navigation processor.
-- Accelerometers measure specific force, and gyroscopes maintain the attitude solution. The processor integrates these to compute position, velocity, and attitude.
+- Accelerometers measure specific force, and gyroscopes maintain the altitude solution. The processor integrates these to compute position, velocity, and altitude.
 
 Performance:
 
 - Navigation accuracy depends on sensor quality
-- The principal advantages of inertial navigation and other dead-reckoning techniques, compared to position fixing, are continuous operation, a high update rate, low short-term noise, and the provision of attitude, angular rate, and acceleration as well as position and velocity.
+- The principal advantages of inertial navigation and other dead-reckoning techniques, compared to position fixing, are continuous operation, a high update rate, low short-term noise, and the provision of altitude, angular rate, and acceleration as well as position and velocity.
 - The main drawbacks are that the position solution must be initialized and the position error grows with time because the errors in successive distance and direction measurements accumulate.
 - In an integrated navigation system, position-fixing measurements may be used to correct the dead-reckoning navigation solution and also calibrate the dead-reckoning sensor errors.
 
@@ -135,7 +135,7 @@ Acoustic signals are used for underwater ranging over a few kilometers. Ultrasou
 Satellite Navigation: GPS, GLONASS, Galileo, and other systems provide global positioning, with a minimum of four satellites required for 3D position fixes and clock offset calibration by passive ranging. GNSS (Global Navigation Satellite Systems) offers high accuracy, but is susceptible to interference and obstructions.
 Each global GNSS constellation is designed to incorporate 24 or more satellites.
 
-GNSS offers a basic positioning accuracy of a few meters. Differential techniques can improve this by making use of base stations at known locations to calibrate some of the errors. Carrier-phase positioning techniques can give centimeter accuracy for real-time navigation and can also be used to measure attitude.
+GNSS offers a basic positioning accuracy of a few meters. Differential techniques can improve this by making use of base stations at known locations to calibrate some of the errors. Carrier-phase positioning techniques can give centimeter accuracy for real-time navigation and can also be used to measure altitude.
 
 - GNSS provides three-dimensional positioning, whereas other terrestrial solutions are limited to horizontal positioning because of their signal geometry
 - GNSS also provides higher accuracy than the terrestrial systems, except for UWB
@@ -197,7 +197,7 @@ Pattern Matching & Fault Detection:
 
 Requirements for Navigation Systems:
 
-Diverse Needs Across Applications: Navigation requirements differ significantly depending on the application. Factors include accuracy, update rate, reliability, budget, size, and mass. Some applications also require attitude solutions in addition to position and velocity.
+Diverse Needs Across Applications: Navigation requirements differ significantly depending on the application. Factors include accuracy, update rate, reliability, budget, size, and mass. Some applications also require altitude solutions in addition to position and velocity.
 
 Examples:
 
@@ -273,7 +273,7 @@ Position-fixing and dead-reckoning systems can be aided using the integrated nav
 
 Dead Reckoning Aiding:
 
-- Requires initialization of position, velocity, and sometimes attitude.
+- Requires initialization of position, velocity, and sometimes altitude.
 - Integration algorithms provide periodic corrections to navigation solutions and sensor outputs.
 - Estimated sensor errors can be fed back to improve accuracy.
 
